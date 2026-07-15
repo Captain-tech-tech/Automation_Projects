@@ -1,0 +1,27 @@
+{
+    "columns": {
+        "name": {
+            "type": "string",
+            "required": true,
+            "nullable": false
+        },
+        "id": {
+            "type": "string",
+            "required": true,
+            "nullable": false
+        },
+        "marks": {
+            "type": "float",
+            "required": true,
+            "nullable": false,
+            "minimum": 0,
+            "maximum": 100
+        },
+        "age": {
+            "type": "integer",
+            "required": true,
+            "nullable": false,
+            "minimum": 0
+        }
+    }
+}

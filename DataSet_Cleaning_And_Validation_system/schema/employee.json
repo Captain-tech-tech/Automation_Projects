@@ -1,0 +1,25 @@
+{
+    "columns": {
+        "id": {
+            "type": "string",
+            "required": true,
+            "nullable": false
+        },
+        "name": {
+            "type": "string",
+            "required": true,
+            "nullable": false
+        },
+        "salary": {
+            "type": "float",
+            "required": true,
+            "nullable": false,
+            "minimum": 0
+        },
+        "department": {
+            "type": "string",
+            "required": true,
+            "nullable": false
+        }
+    }
+}

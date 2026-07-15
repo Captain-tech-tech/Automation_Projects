@@ -1,0 +1,20 @@
+{
+    "columns": {
+        "customer_name": {
+            "type": "string",
+            "required": true,
+            "nullable": false
+        },
+        "product_id": {
+            "type": "string",
+            "required": true,
+            "nullable": false
+        },
+        "price": {
+            "type": "float",
+            "required": true,
+            "nullable": false,
+            "minimum": 0
+        }
+    }
+}
