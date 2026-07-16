@@ -9,10 +9,14 @@ def validateDatatype(df :pd.DataFrame ,schema : dict)-> tuple[bool,list[str]]:  
 
     errors = []  # initially we assume there are zero errors
 
-    # column_name  is temporary name given to current column label
-    # expected_type is temporary name given to current data type 
+    column_schema = schema["columns"]
+
+
+    # column_name  is temporary name given to current DataFrame column
+    # column_rules stores all the validation rules for the current column 
     # .items grab key(column_name) and its value(expected_type) at the same time
-    for column_name, expected_type in schema.items():
+    # this loops through the content of column_schema
+    for column_name, column_rules in column_schema.items():
 
         # checking whether the column exists or not
         if column_name not in df.columns:
@@ -26,6 +30,8 @@ def validateDatatype(df :pd.DataFrame ,schema : dict)-> tuple[bool,list[str]]:  
             continue 
 
         column = df[column_name]
+
+        expected_type = column_rules["type"]
 
         # now validate integer columns
         if expected_type == "integer":            

@@ -48,6 +48,10 @@ def main():
             with open(schema_path,"r") as f:
                 schema = json.load(f)
                 is_valid,error = validateDatatype(dataframe,schema)
+                if is_valid:
+                    print("Datatype validation done!")
+                elif error:
+                    print("Datatype validation failed")
   
 
 
