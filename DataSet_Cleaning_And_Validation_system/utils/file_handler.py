@@ -1,7 +1,6 @@
 # this file take the .xlsx or csv file and return the DataFrame
 # this file follows Single Reponsibilty Principle (SRP)
 
-
 class InvalidPathError(Exception):
     ...
 
@@ -15,7 +14,7 @@ from utils.logger import logger
 # checking whether the path is correct or not and also checking whether the file format is  correct or not
 # the function also return a DataFrame
 
-logger.info("File validation started!")
+logger.info("File path and format validation started!")
 
 def load_dataset(f_path):
 
